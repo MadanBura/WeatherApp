@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    >
+
+    <Button
+        android:id="@+id/btnNoArchitecuture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Architecture"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMVC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With MVC"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNoArchitecuture" />
+
+    <Button
+        android:id="@+id/btnMVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With MVP"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMVC" />
+
+    <Button
+        android:id="@+id/btnMVVM_LIVEDATA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With MVVM_LIVEDATA"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMVP" />
+
+    <Button
+        android:id="@+id/btnMVVM_RxJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With MVVM_RxJava"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMVVM_LIVEDATA" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
