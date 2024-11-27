@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.wether_app.mvc.repository.WeatherRepo
 import com.example.wether_app.mvc.utils.RetrofitInstance
-import com.example.wether_app.NoArchitecture.WeatherResponse
+import com.example.wether_app.mvc.model.response.WeatherResponse
 import com.example.wether_app.databinding.ActivityWeatherMvcBinding
 import retrofit2.Call
 import retrofit2.Callback

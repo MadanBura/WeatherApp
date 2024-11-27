@@ -1,6 +1,6 @@
 package com.example.wether_app.mvc.ApiService
 
-import com.example.wether_app.NoArchitecture.WeatherResponse
+import com.example.wether_app.mvc.model.response.WeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

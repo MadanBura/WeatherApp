@@ -1,6 +1,7 @@
 package com.example.wether_app.mvc.repository
 
 import com.example.wether_app.mvc.ApiService.WeatherApiService
+import com.example.wether_app.mvc.model.response.WeatherResponse
 import retrofit2.Call
 
 class WeatherRepo(private val weatherService: WeatherApiService) {
@@ -11,7 +12,7 @@ class WeatherRepo(private val weatherService: WeatherApiService) {
         days: Int,
         aqi: String,
         alerts: String
-    ): Call<com.example.wether_app.NoArchitecture.WeatherResponse> {
+    ): Call<WeatherResponse> {
         return weatherService.fetchWeatherData(apiKey, location, days, aqi, alerts)
     }
 }

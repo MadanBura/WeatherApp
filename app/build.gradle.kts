@@ -15,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "CITY_API_KEY", "\"4aFJnZw4xiuEL8e25Qsrew==hUbqFizYLsLj6bqq\"")
+        buildConfigField("String", "WEATHER_API_KEY", "\"55ae7587d2194b30bf364918242111\"")
     }
 
     buildTypes {
@@ -36,6 +39,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -55,7 +59,9 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.15.1")
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 
+    implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("com.google.code.gson:gson:2.11.0")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")

@@ -16,6 +16,36 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".retrofit_withNestedCall.using_RxJava.WeatherNestedUsingRxJava"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit_withNestedCall.using_LiveData.WeatherNestedUsingLiveData"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit_withNestedCall.Weather_liveData_nestedCall"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit_with_Response_callback.WeatherApp_using_response_callback"
+            android:exported="false" />
+        <activity
+            android:name=".volley.volley_withGson.Weather_usingVolleyGson"
+            android:exported="false" />
+        <activity
+            android:name=".volley.volley_withJson.Weather_WithVolleyJson"
+            android:exported="false" />
+        <activity
+            android:name=".asyncTask.Weather_UsingAsync"
+            android:exported="false" />
+        <activity
+            android:name=".httpURLConnection.nestedCall.WeatherNestedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".httpURLConnection.using_MVVM.WeatherActivity_HttpUrlConnection"
+            android:exported="false" />
+        <activity
+            android:name=".httpURLConnection.WeatherApp_HttpURLConnection"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.WeatherActivity_RxJava"
             android:exported="false" />
         <activity
@@ -28,7 +58,7 @@
             android:name=".mvc.controller.WeatherActivity_MVC"
             android:exported="false" />
         <activity
-            android:name=".NoArchitecture.Weather_NoArchitecture"
+            android:name=".noArchitecture.Weather_NoArchitecture"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

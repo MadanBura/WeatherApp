@@ -8,55 +8,154 @@
     android:padding="10dp"
     >
 
-    <Button
-        android:id="@+id/btnNoArchitecuture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No Architecture"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnMVC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="With MVC"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnNoArchitecuture" />
 
-    <Button
-        android:id="@+id/btnMVP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="With MVP"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnMVC" />
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnMVVM_LIVEDATA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="With MVVM_LIVEDATA"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnMVP" />
 
-    <Button
-        android:id="@+id/btnMVVM_RxJava"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="With MVVM_RxJava"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnMVVM_LIVEDATA" />
+         <Button
+             android:id="@+id/btnNoArchitecuture"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="No Architecture"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
 
+         <Button
+             android:id="@+id/btnMVC"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="With MVC"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnNoArchitecuture" />
+
+         <Button
+             android:id="@+id/btnMVP"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="With MVP"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnMVC" />
+
+         <Button
+             android:id="@+id/btnMVVM_LIVEDATA"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="With MVVM_LIVEDATA"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnMVP" />
+
+         <Button
+             android:id="@+id/btnMVVM_RxJava"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="With MVVM_RxJava"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnMVVM_LIVEDATA" />
+
+         <Button
+             android:id="@+id/btnHttpUrlConnection"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="network call using HttpUrlConnection"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnMVVM_RxJava" />
+
+         <Button
+             android:id="@+id/btnHttpUrlConnection_NestedCall"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="network call using HttpUrlConnection Nested Call"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnHttpUrlConnection" />
+
+         <Button
+             android:id="@+id/btnNestedCall_AsyncTask"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Nested call using Async Task"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnHttpUrlConnection_NestedCall" />
+
+
+         <Button
+             android:id="@+id/btnVolleyWithJson"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Volley with JSON"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnNestedCall_AsyncTask" />
+
+
+         <Button
+             android:id="@+id/btnVolleyWithGson"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Volley with GSON"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnVolleyWithJson" />
+
+         <Button
+             android:id="@+id/btnUsingResponseCallback"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Retrofit_nestedCall_With_Response_Callback"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnVolleyWithGson" />
+
+
+         <Button
+             android:id="@+id/btnRetrofit_nestedCall_usingLiveData"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Retrofit_nestedCall_with-LiveData"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnUsingResponseCallback" />
+
+         <Button
+             android:id="@+id/btnRetrofit_nestedCall_usingRxJava"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Retrofit_nestedCall_with-RxJava"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnRetrofit_nestedCall_usingLiveData" />
+
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+ </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

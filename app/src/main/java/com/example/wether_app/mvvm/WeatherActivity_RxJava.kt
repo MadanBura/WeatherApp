@@ -87,7 +87,7 @@ class WeatherActivity_RxJava : AppCompatActivity() {
             hourList.clear()
             hourlyWeatherAdapter.notifyDataSetChanged()
 
-            binding.locationName.text = "City not found. Please check the city name."
+            binding.locationName.text = "City_nestedCall not found. Please check the city name."
         }
 
     }
