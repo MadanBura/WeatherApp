@@ -16,6 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".WebDemo.using_WebView.WebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebDemo.using_WebView.WeatherWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebDemo.using_Intent_to_Open_in_Browser.WeatherWebDemo"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit_withNestedCall.using_RxJava.WeatherNestedusingRxJava"
+            android:exported="false" />
+        <activity
             android:name=".retrofit_withNestedCall.using_RxJava.WeatherNestedUsingRxJava"
             android:exported="false" />
         <activity

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".WebDemo.using_Intent_to_Open_in_Browser.WeatherWebDemo">
+
+    <LinearLayout
+        android:id="@+id/LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        >
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter a City name"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnCitySerach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="GET WEATHER DATA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/l"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LL"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="cityName"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/city_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="city Latitude"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/city_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="city Longitude"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/cityPoppulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="city Poppulation"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

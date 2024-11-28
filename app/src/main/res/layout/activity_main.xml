@@ -151,6 +151,26 @@
              app:layout_constraintStart_toStartOf="parent"
              app:layout_constraintTop_toBottomOf="@id/btnRetrofit_nestedCall_usingLiveData" />
 
+         <Button
+             android:id="@+id/webActivityUsingIntent"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="WebDemo Using Intent to Open in a Browser"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/btnRetrofit_nestedCall_usingRxJava" />
+
+         <Button
+             android:id="@+id/webActivityUsingWebView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="WebDemo Using WebView"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/webActivityUsingIntent" />
+
 
 
      </androidx.constraintlayout.widget.ConstraintLayout>

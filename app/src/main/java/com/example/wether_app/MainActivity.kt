@@ -3,6 +3,8 @@ package com.example.wether_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.wether_app.WebDemo.using_Intent_to_Open_in_Browser.WeatherWebDemo
+import com.example.wether_app.WebDemo.using_WebView.WeatherWebViewActivity
 import com.example.wether_app.asyncTask.Weather_UsingAsync
 import com.example.wether_app.httpURLConnection.nestedCall.WeatherNestedActivity
 import com.example.wether_app.httpURLConnection.using_MVVM.WeatherActivity_HttpUrlConnection
@@ -13,7 +15,7 @@ import com.example.wether_app.noArchitecture.Weather_NoArchitecture
 import com.example.wether_app.databinding.ActivityMainBinding
 import com.example.wether_app.mvvm.WeatherActivity_RxJava
 import com.example.wether_app.retrofit_withNestedCall.using_LiveData.WeatherNestedUsingLiveData
-import com.example.wether_app.retrofit_withNestedCall.using_RxJava.WeatherNestedUsingRxJava
+import com.example.wether_app.retrofit_withNestedCall.using_RxJava.WeatherNestedusingRxJava
 import com.example.wether_app.retrofit_with_Response_callback.WeatherApp_using_response_callback
 import com.example.wether_app.volley.volley_withJson.Weather_WithVolleyJson
 
@@ -104,7 +106,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnRetrofitNestedCallUsingRxJava.setOnClickListener {
-            Intent(this, WeatherNestedUsingRxJava::class.java).also {
+            Intent(this, WeatherNestedusingRxJava::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.webActivityUsingIntent.setOnClickListener {
+            Intent(this, WeatherWebDemo::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.webActivityUsingWebView.setOnClickListener {
+            Intent(this, WeatherWebViewActivity::class.java).also {
                 startActivity(it)
             }
         }
