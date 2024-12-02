@@ -10,7 +10,10 @@ import com.example.wether_app.retrofit_withNestedCall.using_RxJava.repository.Ci
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.CityRxViewModel
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.CityRxViewModelFactory
 import android.view.View
+import com.example.wether_app.retrofit_withNestedCall.using_RxJava.repository.ApiRxRepository
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.repository.WeatherRxRepository
+import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.ApiRxViewModel
+import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.ApiRxViewModelFactory
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.WeatherRxViewModel
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.viewModels.WeatherRxViewModelFactory
 
@@ -18,13 +21,20 @@ class WeatherNestedusingRxJava : AppCompatActivity() {
 
     private lateinit var binding : ActivityWeatherNestedUsingRxJavaBinding
 
-    private val cityRxViewModel : CityRxViewModel by viewModels {
-        CityRxViewModelFactory(CityRxRepository())
+//    private val cityRxViewModel : CityRxViewModel by viewModels {
+//        CityRxViewModelFactory(CityRxRepository())
+//    }
+//
+//    private val weatherRxViewModel : WeatherRxViewModel by viewModels {
+//        WeatherRxViewModelFactory(WeatherRxRepository())
+//    }
+//
+
+
+    private val apiRxViewModel : ApiRxViewModel by viewModels {
+        ApiRxViewModelFactory(ApiRxRepository())
     }
 
-    private val weatherRxViewModel : WeatherRxViewModel by viewModels {
-        WeatherRxViewModelFactory(WeatherRxRepository())
-    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,26 +50,42 @@ class WeatherNestedusingRxJava : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
 
             val cityName = binding.etSearchLocation.text.toString()
+//
+//            cityRxViewModel.getCityData(city_API_KEY, cityName)
+//            cityRxViewModel.cityData.observe(this, Observer { cityResponse ->
+//                val lat = cityResponse[0].latitude.toString()
+//                val long = cityResponse[0].longitude.toString()
+//
+//                binding.etLat.text = lat
+//                binding.etLong.text= long
+//
+//                val lat_long = "$lat,$long"
+//
+//                binding.btnGetWeatherData.visibility = View.VISIBLE
+//                binding.btnGetWeatherData.setOnClickListener {
+//
+//                    weatherRxViewModel.getWeatherData(weather_API_KEY, lat_long)
+//                    weatherRxViewModel.weatherRxData.observe(this,Observer{
+//                        binding.tvTemp.text = it.toString()
+//                    })
+//                }
+//            })
 
-            cityRxViewModel.getCityData(city_API_KEY, cityName)
-            cityRxViewModel.cityData.observe(this, Observer { cityResponse ->
-                val lat = cityResponse[0].latitude.toString()
-                val long = cityResponse[0].longitude.toString()
 
-                binding.etLat.text = lat
-                binding.etLong.text= long
+            apiRxViewModel.getApiData(city_API_KEY,cityName)
+            apiRxViewModel.apiResponse.observe(this, Observer {
+                if(it!=null){
+                    val cityRes = it.cityRxResponse
+                    val weatherRes = it.weatherResRxJava
 
-                val lat_long = "$lat,$long"
+                    binding.etLat.text = cityRes[0].latitude.toString()
+                    binding.etLong.text = cityRes[0].longitude.toString()
+                    binding.tvTemp.text = weatherRes.toString()
 
-                binding.btnGetWeatherData.visibility = View.VISIBLE
-                binding.btnGetWeatherData.setOnClickListener {
-
-                    weatherRxViewModel.getWeatherData(weather_API_KEY, lat_long)
-                    weatherRxViewModel.weatherRxData.observe(this,Observer{
-                        binding.tvTemp.text = it.toString()
-                    })
                 }
             })
-        }
+
+
+       }
     }
 }

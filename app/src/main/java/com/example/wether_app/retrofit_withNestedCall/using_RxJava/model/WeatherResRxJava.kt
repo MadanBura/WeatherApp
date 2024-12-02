@@ -5,3 +5,6 @@ data class WeatherResRxJava(
     val forecast: Forecast,
     val location: Location
 )
+
+
+

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
-    tools:context=".retrofit_withNestedCall.using_RxJava.WeatherNestedUsingRxJava">
+    tools:context=".retrofit_withNestedCall.using_RxJava.WeatherNestedusingRxJava">
 
     <EditText
         android:id="@+id/etSearchLocation"
@@ -40,6 +40,7 @@
 
 
         <LinearLayout
+            android:id="@id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -74,36 +75,21 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnGetWeatherData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weather Data"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-
     <ScrollView
         android:id="@+id/svScroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetWeatherData">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
         <TextView
             android:id="@+id/tvTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
 
     </ScrollView>
 

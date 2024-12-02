@@ -5,11 +5,16 @@ import com.example.wether_app.retrofit_withNestedCall.using_RxJava.model.Weather
 import com.example.wether_app.retrofit_withNestedCall.using_RxJava.utils.RetrofitRxInstance
 import io.reactivex.rxjava3.core.Observable
 
-class CityRxRepository {
-
+class ApiRxRepository {
     val cityRxService = RetrofitRxInstance.cityRxService
+    val weatherRxServices = RetrofitRxInstance.weatherRxService
 
     fun getCityData(apiKey:String, cityName:String) : Observable<CityRxResponse>{
         return cityRxService.getCityDataFromApi(apiKey, cityName)
     }
+
+    fun getWeatherData(apikey:String, lat_long:String) :Observable<WeatherResRxJava>{
+        return weatherRxServices.fetchWeatherData(apikey, lat_long)
+    }
+
 }
