@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,6 +18,44 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".receiver.NetworkSampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".service_demo.LocationAndBroadCastDemo"
+            android:exported="false" />
+        <activity
+            android:name=".workManagerDemo.ListAllRegisteredUsers"
+            android:exported="false" />
+        <activity
+            android:name=".workManagerDemo.UserAddActivity"
+            android:exported="false" />
+
+
+        <receiver
+            android:name=".receiver.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".service_demo.LocationService_Demo"
+            android:enabled="true"
+            android:exported="false" /> <!-- <receiver -->
+        <!-- android:name=".receiver.NetworkReceiver" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".activityResultLauncher.Activity_bb"
+            android:exported="false" />
+        <activity
+            android:name=".activityResultLauncher.Activity_aa"
+            android:exported="false" />
+        <activity
             android:name=".WebDemo.using_WebView.WebActivity"
             android:exported="false" />
         <activity
@@ -28,13 +68,7 @@
             android:name=".retrofit_withNestedCall.using_RxJava.WeatherNestedusingRxJava"
             android:exported="false" />
         <activity
-            android:name=".retrofit_withNestedCall.using_RxJava.WeatherNestedUsingRxJava"
-            android:exported="false" />
-        <activity
             android:name=".retrofit_withNestedCall.using_LiveData.WeatherNestedUsingLiveData"
-            android:exported="false" />
-        <activity
-            android:name=".retrofit_withNestedCall.Weather_liveData_nestedCall"
             android:exported="false" />
         <activity
             android:name=".retrofit_with_Response_callback.WeatherApp_using_response_callback"

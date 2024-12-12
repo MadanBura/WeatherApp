@@ -171,6 +171,50 @@
              app:layout_constraintStart_toStartOf="parent"
              app:layout_constraintTop_toBottomOf="@id/webActivityUsingIntent" />
 
+             <Button
+                 android:id="@+id/resultLauncher"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="ActivityResultLauncher"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginStart="20dp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/webActivityUsingWebView" />
+
+         <Button
+             android:id="@+id/workManager"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="WorkManager Demo"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/resultLauncher" />
+
+
+         <Button
+             android:id="@+id/locationService"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Service Demo (Location)"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/workManager" />
+
+
+         <Button
+             android:id="@+id/networkBroadcaster"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Network Broadcast Demo"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/locationService" />
+
+
+
 
 
      </androidx.constraintlayout.widget.ConstraintLayout>
